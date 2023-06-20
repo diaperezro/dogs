@@ -1,0 +1,97 @@
+
+.home{
+    background-image: url("C:\Users\diego\Downloads\PI-Dogs-main\PI-Dogs-main\client\src\views\home\6638486_3392075.png");
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(555px);
+}
+
+
+.top{
+    position: relative;
+    display: flex;
+    justify-content: right;
+}
+
+.top .Navbar{
+    width: 40%;
+    display: flex;
+    justify-content: right;
+}
+
+.top .receta{
+    width: 20%;
+    padding-top: 6.5px;
+    padding-right: 10%;
+}
+
+.filtros{
+    display: flex;
+    justify-content: center;
+}
+
+.filtros span{
+    margin-right: 30px;
+}
+
+.order{
+    display: flex;
+    justify-content: center;
+}
+
+.order span{
+    margin-right: 30px;
+    margin-left: 0px;
+}
+
+
+.receta button {
+    display: inline-block;
+    padding: 0.65em 1.6em;
+    border: 3px solid #ffffff;
+    background-color: rgb(47, 76, 202);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.38em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+    animation: btnbouncy 3s infinite linear;
+    position: relative;
+}
+
+.receta button:hover {
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(47, 76, 202);
+    background-color: white;
+    color: #000000;
+}
+
+@keyframes btnbouncy {
+    0% {
+      top: 0em;
+    }
+    40% {
+      top: 0em;
+    }
+    43% {
+      top: -0.9em;
+    }
+    46% {
+      top: 0em;
+    }
+    48% {
+      top: -0.4em;
+    }
+    50% {
+      top: 0em;
+    }
+    100% {
+      top: 0em;
+    }
+}

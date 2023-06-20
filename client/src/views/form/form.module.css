@@ -1,0 +1,176 @@
+.page{
+    background-image: url("C:\Users\diego\Downloads\PI-Dogs-main\PI-Dogs-main\client\src\views\form\6638486_3392075.png");
+}
+.formulario{
+    width: 600px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-family: 'calibri';
+    border:3px solid #1326a0f8;
+    border-radius: 10px;
+}
+
+.formulario button{
+    width: 80px;
+    display: inline-block;
+    padding: 10px;
+    border: 3px solid #ffffff;
+    background-color: rgb(47, 76, 202);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.38em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+    animation: btnbouncy 3s infinite linear;
+    position: relative; 
+}
+
+.formulario button:hover {
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(47, 76, 202);
+    background-color: white;
+    color: #000000;
+}
+
+@keyframes btnbouncy {
+    0% {
+      top: 0em;
+    }
+    40% {
+      top: 0em;
+    }
+    43% {
+      top: -0.9em;
+    }
+    46% {
+      top: 0em;
+    }
+    48% {
+      top: -0.4em;
+    }
+    50% {
+      top: 0em;
+    }
+    100% {
+      top: 0em;
+    }
+}
+
+span{
+    color: rgb(181, 14, 14);
+}
+
+.entrada{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+
+}
+
+.entrada label{
+    width: 18%;
+    padding: 0;
+    color: black;
+}
+
+.cajasBasicas{
+    width: 70%;
+    height: 10px;
+    color: rgb(89, 89, 93);
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 18px;
+    margin-bottom: 0px;
+    border:2px solid #1544ab;
+    font-family: 'calibri';
+    font-size:16px ;
+}
+
+.bmenor{
+    width: 25%;
+    background-color: #1f53c5;
+    margin: 10px;
+    border: none;
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+.botons{
+    font-size: 16px;
+}
+
+.desplegable {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline: 0;
+    box-shadow:none;
+    border:0!important;
+    background: #2642b1;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color:#fff;
+    cursor:pointer;
+    font-size: 0.77em;
+    font-family: 'Open Sans', sans-serif;
+    
+ }
+ 
+ .desplegable::-ms-expand {
+    display: none;
+ }
+ 
+ .select {
+    position: relative;
+    display: flex;
+    margin-left: 120px;
+    width: 24em;
+    height: 1.4em;
+    line-height: 3;
+    background: #2e4ab8;
+    overflow: hidden;
+    border-radius: .25em;
+    box-shadow: 1px 2px 4px rgba(98, 98, 98, 0.951);
+ }
+
+ .temps{
+    color: #000000;
+ }
+ 
+ .select::after {
+    content: '\25BC';
+    font-size: 0.75em;
+    line-height: 0.9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px;
+    background:   #2642b1;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+    color: #e4ebeb;
+ }
+ .select:hover::after {
+    color: #2d2e2d;
+ }
+
+
+
+/* .op{
+    display: flex;
+    align-items: center;  
+    background-color: rgb(225, 65, 65);
+    position: fixed;
+} */
