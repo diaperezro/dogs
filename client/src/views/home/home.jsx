@@ -3,10 +3,10 @@ import Navbar from "../../components/navBar/navBar"
 import DespTemp from "../../components/despTemp/despTemp"
 import DespTcreat from "../../components/despTcreat/despTcreat"
 import DespAlfabet from "../../components/despAlfabet/despAlfabet"
-import DespHs from "../../components/desphs/desphs"
+import DespPeso from "../../components/desphs/despPeso"
 import Paginas from "../../components/paginas/paginas"
 import style from "./home.module.css"
-import axios from "axios"
+import ReiniciarFiltro from "../../components/reiniciarFiltro/reiniciarFiltro"
 
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
@@ -30,9 +30,12 @@ export default function Home() {
         dispatch(setDietsDB(temps))
     }, [render])
 
+
+
     return (
         <div className={style.home}>
-
+            <h1>Henry Dogs</h1>
+            <br></br><br></br>
             {/* Barra de busqueda +  crear receta */}
             <div className={style.top}>
                 <div  className={style.Navbar}>
@@ -54,9 +57,12 @@ export default function Home() {
             {/* filtros orden*/}
             <div className={style.order}>
                 <span><DespAlfabet/></span>
-                <span><DespHs/></span>
+                <span><DespPeso/></span>
             </div>
+            
+            {/* Reinciar filtros */}
             <br></br>
+            <ReiniciarFiltro/>
             
             {/* Paginas */}
             <Paginas setRender={setRender} />

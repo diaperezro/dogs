@@ -8,7 +8,7 @@ export default function Card({dog}){
         <div className={style.card}>
 
             <div className={style.img_contenedor}>
-                <img src={dog.image}/>
+                <img src={dog.image} alt="Imagen del perro"/>
             </div>
             <div className={style.contenido}>
                 <div className={style.titulo}>

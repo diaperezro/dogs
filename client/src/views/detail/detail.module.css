@@ -2,21 +2,23 @@
 
 .detail{
     display:flex;
-    padding: 70px;
+    justify-content: center;
 }
 
 .informacion{
-    width: 100%;
-    margin-top: 10px;
+
+    width: 50%;
+    margin-top: 30px;
     margin-left: 10px;
     margin-right: 10px;
     background:rgba(232, 232, 232, 0);
     border-radius: 20px;
     box-shadow: 0 35px 80px rgba(0,0,0,0.15);
-    height: 80%;
+    position: relative;
 }
 
 .titulo{
+    margin-top: 50px;
     width: 80%;
     margin-left: 10%;
 }
@@ -62,25 +64,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
+.home{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 
-.listas{
-    width: 80%;
-    margin-left: 10%;
-}
-
-.listas h1{
-    font-size: 1.2em;
-    font-weight: 650;
-    color: #2516c4e3;
-    line-height: 1em;
-}
-
-.listas ol h2{
-    font-size: 0.9em;
-    font-weight: 250;
-    color: #474646;
-    line-height: 1em;
 }

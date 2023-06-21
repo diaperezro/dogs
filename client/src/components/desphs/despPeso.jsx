@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux"
 import { setFiltro } from "../../redux/actions/index"
-import style from "./desphs.module.css"
+import style from "./despPeso.module.css"
 
-export default function DespHs({filtroHs}){
+export default function DespPeso(){
 
     const dispatch = useDispatch()
 
@@ -50,7 +50,7 @@ export default function DespHs({filtroHs}){
         <>
             <div className={style.select}>
                 <select id="continents" onChange={filtroHs} className={style.desplegable} defaultValue="defaultOption">
-                    <option value="defaultOption" disabled>Orden Health Score:</option>
+                    <option value="defaultOption" disabled>Orden peso:</option>
                     <option value="creciente">Creciente</option>
                     <option value="decreciente">Decreciente</option>
                 </select>

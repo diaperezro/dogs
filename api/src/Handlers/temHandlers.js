@@ -17,16 +17,15 @@ const setTem = async ( req , res ) => {
             const temperamentos_DB = await Temperament.count()
             if(temperamentos_DB !== 124){    
                 const newTem = await Temperament.bulkCreate(allTemps)
-                console.log("si modificado perroz")
+                console.log("temps modificados")
                 res.status(200).json(newTem)  
             } 
             else{
-                console.log("no modificado")
-                res.status(200).send("no modificado perroz")
+                res.status(200).send("temps no modificados")
             } 
         }
         else{
-            res.status(200).json("Todo bn pero arreglo vacio")
+            res.status(200).json("correcto, arreglo vacio")
         }
     } 
     catch(error){

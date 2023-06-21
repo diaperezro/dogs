@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { useSelector } from "react-redux"
 import style from "./form.module.css"
-import { Link } from "react-router-dom"
 import { validation, validation_submit } from "./validations"
+import BackHome from "../../components/backHome/backHome"
 
 
 export default function Form() {
@@ -73,8 +73,10 @@ export default function Form() {
 
     return (
         <div className={style.page}>
+            <h1>Henry Dogs</h1>
+
             <div className={style.formulario}>
-                <Link to='/home'><button>Regresar a home</button></Link>
+                <BackHome/>
                 <hr></hr>
                 <br></br>
                 <form onChange={handleChange} className={style.principal}>
@@ -82,55 +84,55 @@ export default function Form() {
                     <div>
                         <div className={style.entrada}>
                             <label><h4>Raza:</h4></label>
-                            <input name="name" className={style.cajasBasicas} placeholder="Ingresa la raza del perro"></input>
+                            <input value = {form.name} name="name" className={style.cajasBasicas} placeholder="Ingresa la raza del perro"></input>
                         </div>
                         <span>{error.name}</span>
                         <br />
 
                         <div className={style.entrada}>
                             <label><h4>Imagen:</h4></label>
-                            <input name="image" className={style.cajasBasicas} placeholder="Ingresa la url de la imagen"></input>
+                            <input value = {form.image} name="image" className={style.cajasBasicas} placeholder="Ingresa la url de la imagen"></input>
                         </div>
                         <span>{error.image}</span>
                         <br />
 
                         <div className={style.entrada}>
                             <label><h4>Peso minimo:</h4></label>
-                            <input name="MinWeight" type="number" min="0" max="1000" step="1" className={style.cajasBasicas} placeholder="Ingresa el peso minimo del perro"></input>
+                            <input value = {form.MinWeight} name="MinWeight" type="number" min="0" max="1000" step="1" className={style.cajasBasicas} placeholder="Ingresa el peso minimo del perro"></input>
                         </div>
                         <span>{error.MinWeight}</span>
                         <br />
 
                         <div className={style.entrada}>
                             <label><h4>Peso maximo:</h4></label>
-                            <input name="MaxWeight" type="number" min="0" max="1000" step="1" className={style.cajasBasicas} placeholder="Ingresa el peso maximo del perro"></input>
+                            <input value = {form.MaxWeight} name="MaxWeight" type="number" min="0" max="1000" step="1" className={style.cajasBasicas} placeholder="Ingresa el peso maximo del perro"></input>
                         </div>
                         <span>{error.MaxWeight}</span>
                         <br />
 
                         <div className={style.entrada}>
                             <label><h4>Altura minima:</h4></label>
-                            <input name="MinHeight" type="number" min="0" max="101" step="1" className={style.cajasBasicas} placeholder="Ingresa la altura minima del perro"></input>
+                            <input value = {form.MinHeight} name="MinHeight" type="number" min="0" max="101" step="1" className={style.cajasBasicas} placeholder="Ingresa la altura minima del perro"></input>
                         </div>
                         <span>{error.MinHeight}</span>
                         <br />
 
                         <div className={style.entrada}>
                             <label><h4>Altura maxima:</h4></label>
-                            <input name="MaxHeight" type="number" min="0" max="101" step="1" className={style.cajasBasicas} placeholder="Ingresa la altura maxima del perro"></input>
+                            <input value = {form.MaxHeight} name="MaxHeight" type="number" min="0" max="101" step="1" className={style.cajasBasicas} placeholder="Ingresa la altura maxima del perro"></input>
                         </div>
                         <span>{error.MaxHeight}</span>
                         <br />
 
                         <div className={style.entrada}>
                             <label><h4>Esparanza de vida (cota inferior):</h4></label>
-                            <input name="life_span_CI" type="number" min="0" max="101" step="1" className={style.cajasBasicas} placeholder="Esparanza de vida (cota inferior)"></input>
+                            <input value = {form.life_span_CI} name="life_span_CI" type="number" min="0" max="101" step="1" className={style.cajasBasicas} placeholder="Esparanza de vida (cota inferior)"></input>
                         </div>
                         <span>{error.life_span_CI}</span>
 
                         <div className={style.entrada}>
                             <label><h4>Esparanza de vida (cota superior):</h4></label>
-                            <input name="life_span_CS" type="number" min="0" max="101" step="1" className={style.cajasBasicas} placeholder="Esparanza de vida (cota superior)"></input>
+                            <input value = {form.life_span_CS} name="life_span_CS" type="number" min="0" max="101" step="1" className={style.cajasBasicas} placeholder="Esparanza de vida (cota superior)"></input>
                         </div>
                         <span>{error.life_span_CS}</span>
                     </div>
@@ -147,7 +149,7 @@ export default function Form() {
 
                     <div>
                         {form.temperament?.map( temper => (
-                            <option onClick={clickTemp}>{temps[temper-1]}</option>
+                            <option onClick={clickTemp} key={temps[temper-1]}>{temps[temper-1]}</option>
                         ))}
                     </div>
                     <br></br>
